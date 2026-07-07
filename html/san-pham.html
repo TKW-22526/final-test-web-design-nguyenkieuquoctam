@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Sản Phẩm | X-Speed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <span class="text-red">X</span>-SPEED
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Trang Chủ</a></li>
+                    <li><a href="../html/san-pham.html" class="active">Sản Phẩm</a></li>
+                    <li><a href="../html/gioi-thieu.html">Giới Thiệu</a></li>
+                    <li><a href="../html/lien-he.html">Liên Hệ</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="search-box-trigger">
+                    <a href="#filter-section"><i class="fas fa-search"></i></a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+   
+        <div class="text-center">
+            <h1 style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; text-transform: uppercase;">DANH MỤC XE</h1>
+            <p style="color: var(--gray-text); font-size: 0.95rem; margin-top: 0.5rem;">
+                <a href="../index.html" style="color: var(--light-text);">Trang Chủ</a> &nbsp;/&nbsp; <span class="text-red">Sản Phẩm</span>
+            </p>
+        </div>
+    </section>
+
+    <main class="container" id="filter-section" style="padding-top: 3rem;">
+        
+        <div class="filter-wrapper" style="background: var(--dark-card); border: 1px solid var(--border-color); padding: 1.5rem; margin-bottom: 3rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; align-items: flex-end;">
+                
+                <div class="filter-group">
+                    <label style="display:block; font-family:var(--font-heading); font-size:0.8rem; font-weight:700; margin-bottom:0.5rem; text-transform:uppercase; color:var(--gray-text);">Tìm kiếm nhanh</label>
+                    <input type="text" id="searchKey" placeholder="Nhập tên xe, mã sản phẩm..." style="width:100%; padding:0.7rem 1rem; background:var(--dark-bg); border:1px solid var(--border-color); color:var(--light-text); font-family:var(--font-main);">
+                </div>
+
+                <div class="filter-group">
+                    <label style="display:block; font-family:var(--font-heading); font-size:0.8rem; font-weight:700; margin-bottom:0.5rem; text-transform:uppercase; color:var(--gray-text);">Hãng sản xuất</label>
+                    <select id="filterHang" style="width:100%; padding:0.7rem 1rem; background:var(--dark-bg); border:1px solid var(--border-color); color:var(--light-text); cursor:pointer;">
+                        <option value="all">Tất cả các hãng</option>
+                        <option value="Yamaha">Yamaha</option>
+                        <option value="Honda">Honda</option>
+                        <option value="Suzuki">Suzuki</option>
+                        <option value="Kawasaki">Kawasaki</option>
+                        <option value="KTM">KTM</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label style="display:block; font-family:var(--font-heading); font-size:0.8rem; font-weight:700; margin-bottom:0.5rem; text-transform:uppercase; color:var(--gray-text);">Dung tích động cơ</label>
+                    <select id="filterCC" style="width:100%; padding:0.7rem 1rem; background:var(--dark-bg); border:1px solid var(--border-color); color:var(--light-text); cursor:pointer;">
+                        <option value="all">Tất cả phân khối</option>
+                        <option value="150-155">Xe Côn Tay (150cc - 155cc)</option>
+                        <option value="pkl">Phân Khối Lớn (> 155cc)</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label style="display:block; font-family:var(--font-heading); font-size:0.8rem; font-weight:700; margin-bottom:0.5rem; text-transform:uppercase; color:var(--gray-text);">Khoảng giá (VNĐ)</label>
+                    <select id="filterGia" style="width:100%; padding:0.7rem 1rem; background:var(--dark-bg); border:1px solid var(--border-color); color:var(--light-text); cursor:pointer;">
+                        <option value="all">Mọi mức giá</option>
+                        <option value="under-50">Dưới 50 Triệu</option>
+                        <option value="50-100">Từ 50 - 100 Triệu</option>
+                        <option value="over-100">Trên 100 Triệu</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label style="display:block; font-family:var(--font-heading); font-size:0.8rem; font-weight:700; margin-bottom:0.5rem; text-transform:uppercase; color:var(--gray-text);">Sắp xếp theo giá</label>
+                    <select id="sortPrice" style="width:100%; padding:0.7rem 1rem; background:var(--dark-bg); border:1px solid var(--border-color); color:var(--light-text); cursor:pointer;">
+                        <option value="none">Mặc định</option>
+                        <option value="asc">Giá: Thấp đến Cao</option>
+                        <option value="desc">Giá: Cao đến Thấp</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="product-grid" id="all-products-grid">
+            <div class="loading-placeholder">Hệ thống đang đồng bộ kho xe, vui lòng đợi...</div>
+        </div>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col footer-brand">
+                <h3 class="footer-logo"><span class="text-red">X</span>-SPEED</h3>
+                <p>Hệ thống phân phối xe côn tay từ 150cc - 155cc và xe phân khối lớn uy tín hàng đầu Việt Nam. Nơi hiện thực hóa đam mê tốc độ của bạn.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>ĐƯỜNG DẪN NHANH</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Trang Chủ</a></li>
+                    <li><a href="../html/san-pham.html"><i class="fas fa-chevron-right"></i> Danh Sách Sản Phẩm</a></li>
+                    <li><a href="../html/chi-tiet.html"><i class="fas fa-chevron-right"></i> Giới Thiệu</a></li>
+                    <li><a href="../html/lien-he.html"><i class="fas fa-chevron-right"></i> Liên Hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Chính sách bảo hành</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Mua xe trả góp</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Quy trình đăng ký biển số</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-contact">
+                <h4>THÔNG TIN LIÊN HỆ</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Khối Đô Thị Đại Học, Trà Vinh, Việt Nam</p>
+                <p><i class="fas fa-phone-alt"></i> +84 123 456 789</p>
+                <p><i class="fas fa-envelope"></i> contact@xspeed.id.vn</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 X-SPEED. Tất cả các quyền được bảo lưu. Thiết kế và phát triển bởi Lập trình viên Front-end.</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

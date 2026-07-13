@@ -31,10 +31,26 @@
     <div class="wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow">6 mẫu xe · 150–155cc</p>
+          <p class="eyebrow">12 mẫu xe · 150–155cc · 4 màu mỗi xe</p>
           <h1 class="section-title">Tất cả sản phẩm</h1>
         </div>
-        <p class="section-sub">Lọc theo dòng xe hoặc sắp xếp theo giá để tìm chiếc côn tay phù hợp với bạn.</p>
+        <p class="section-sub">Tìm theo tên/hãng xe, lọc theo dòng xe hoặc theo màu sắc, sắp xếp theo giá để tìm chiếc côn tay phù hợp với bạn.</p>
+      </div>
+
+      <div class="search-row">
+        <div class="search-box">
+          <input type="text" id="search-input" placeholder="Tìm theo tên xe hoặc hãng... VD: Exciter, Honda">
+        </div>
+        <span class="result-count" id="result-count"></span>
+      </div>
+
+      <div class="color-filter-row">
+        <span class="color-filter-label">Tìm theo màu</span>
+        <button type="button" class="color-filter-btn all-colors active" data-color="all" title="Tất cả màu" aria-label="Tất cả màu"></button>
+        <button type="button" class="color-filter-btn" data-color="den" style="background:#111111" title="Đen" aria-label="Màu Đen"></button>
+        <button type="button" class="color-filter-btn" data-color="trang" style="background:#f5f5f0" title="Trắng" aria-label="Màu Trắng"></button>
+        <button type="button" class="color-filter-btn" data-color="do" style="background:#e10600" title="Đỏ" aria-label="Màu Đỏ"></button>
+        <button type="button" class="color-filter-btn" data-color="xanh" style="background:#1e6fd9" title="Xanh dương" aria-label="Màu Xanh dương"></button>
       </div>
 
       <div class="filter-bar">
@@ -49,12 +65,13 @@
         </select>
       </div>
 
-      <div class="row row-cols-1 row-cols-4" id="product-list"></div>
+      <div id="product-list"></div>
     </div>
   </section>
 
   <footer class="site-footer">
     <div class="wrap">
+      <p style="margin-bottom:16px;"><a href="tai-anh.html" style="color:var(--gray); font-family:var(--font-mono); font-size:12px; border-bottom:1px solid var(--line); padding-bottom:2px;">⬇ Tải ảnh sản phẩm (SVG)</a></p>
       <div class="footer-bottom">
         <span>© 2026 K7 MOTO. Đồ án môn học — không phải cửa hàng thật.</span>
         <span>Thiết kế bởi Nguyễn Kiều Quốc Tâm</span>

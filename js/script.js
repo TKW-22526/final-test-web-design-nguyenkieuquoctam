@@ -6,7 +6,7 @@
 /* Tự nhận biết trang đang chạy ở thư mục gốc hay trong /html/
    để tính đúng đường dẫn ảnh & link chi tiết. */
 const IN_HTML_FOLDER = window.location.pathname.includes("/html/");
-const IMG_BASE = IN_HTML_FOLDER ? "../assets/img" : "assets/img/";
+const IMG_BASE = IN_HTML_FOLDER ? "../assets/img/" : "assets/img/";
 const DETAIL_BASE = IN_HTML_FOLDER ? "chi-tiet.html" : "html/chi-tiet.html";
 
 /* ---------------------------------------------------------
